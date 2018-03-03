@@ -1,0 +1,110 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.first-level, .second-level, .third-level {
+	margin: 0;
+    padding: 0;
+    list-style-type: none;
+ }
+
+.first-level {
+	height: 2em;
+    font-size: 18px;
+    line-height: 2em;
+    text-align: center;
+}
+
+.first-level a {
+    display: block;
+    padding: 0 5px;
+    color: #000;
+    text-decoration:none;
+}
+
+.first-level > li {
+    height: 2em;
+    width: 150px;
+    float: left;
+    margin-left: 1px;
+    background-color: #006eff;
+}
+
+.first-level > li:first-child {
+    margin-left: 0;
+}
+
+.first-level > li:hover {
+    background-color: #eee;
+}
+
+.first-level > li:hover > a {
+    color: #09C;
+}
+
+.first-level > li:hover > .second-level {
+    display: block;
+}
+
+.second-level {
+    display: none;
+}
+
+.second-level > li {
+    position: relative;
+    background-color:#eee;
+}
+
+.second-level > li > a {
+    border-top: 1px solid #fff;
+}
+
+.second-level > li:hover {
+    background-color: #ddd;
+}
+
+.second-level > li:hover > a {
+    color: #09c;
+}
+
+.third-level {
+	width: 150%;
+    display: none;
+    position :absolute;
+    left :100%;
+    margin-top: -2em;
+}
+
+.second-level > li:hover > .third-level {
+    display: block;
+}
+
+.third-level > li {
+    background-color: #ccc;
+}
+
+.third-level > li > a {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.third-level > li > a:hover {
+    color: #09c;
+}
+
+.third-level a {
+    border-radius: 6px;
+}
